@@ -41,6 +41,11 @@ class Board:
 
         '''
 
+        if y1 < 0 or x1 < 0 or y1 >= self.height or x1 >= self.width:
+            return 0
+        if y2 < 0 or x2 < 0 or y2 >= self.height or x2 >= self.width:
+            return 0
+
         res = 0
         for y in range(y1, y2 + 1):
             for x in range(x1, x2 + 1):
